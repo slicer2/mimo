@@ -27,7 +27,7 @@ def hermitian(arr):
 
 def slice(est, modSyms):
     d = np.abs(np.subtract.outer(est, modSyms))
-    print(d)
+    #print(d)
     return modSyms[np.argmin(d, 1)]
 
 if __name__ == '__main__':
