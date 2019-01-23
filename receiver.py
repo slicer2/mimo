@@ -15,7 +15,7 @@ class Receiver:
         rx = rxSym + noise
 
         if method == 'MMSE':
-            assert (H != None)
+            assert (not H is None)
             M = np.dot(utils.hermitian(H), np.linalg.inv(np.dot(H, utils.hermitian(H)) + np.eye(H.shape[0]) * self.N0))
             est = np.dot(M, rx)
             return utils.slice(est, self.modSyms)
